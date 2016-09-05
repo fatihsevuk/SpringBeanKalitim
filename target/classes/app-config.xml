@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation=
+		"http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+     	http://www.springframework.org/schema/context/spring-context.xsd"
+        
+        >
+        
+	<!-- <bean id="fb" class="com.fatih.SporTakimi">
+	
+		<property name="tur" value="FUTBOL"></property>
+		<property name="takimAdi" value="Fenerbahçe"></property>
+		<property name="kurulus" value="1907"></property>
+	
+	</bean>
+	
+	<bean id="gs" class="com.fatih.SporTakimi">
+	
+		<property name="tur" value="FUTBOL"></property>
+		<property name="takimAdi" value="Galatasaray"></property>
+		<property name="kurulus" value="1905"></property>
+	
+	</bean>
+	
+	<bean id="bjk" class="com.fatih.SporTakimi">
+	
+		<property name="tur" value="FUTBOL"></property>
+		<property name="takimAdi" value="Beşiktaş"></property>
+		<property name="kurulus" value="1903"></property>
+	
+	</bean>
+	
+	<bean id="ts" class="com.fatih.SporTakimi">
+	
+		<property name="tur" value="FUTBOL"></property>
+		<property name="takimAdi" value="TrabzonSpor"></property>
+		<property name="kurulus" value="1961"></property>
+	
+	</bean> -->
+	
+	<bean id="futbolTakim" class="com.fatih.SporTakimi" abstract="true">
+		<property name="tur" value="FUTBOL" />
+	</bean>
+	
+	<bean id="fb" parent="futbolTakim">
+		
+		<property name="takimAdi" value="Fenerbahçe" />
+		<property name="kurulus" value="1907" />
+		
+	</bean>
+	
+	<bean id="gs" parent="futbolTakim">
+		
+		<property name="takimAdi" value="Galatasaray" />
+		<property name="kurulus" value="1905" />
+		
+	</bean>
+	
+	<bean id="bjk" parent="futbolTakim">
+		
+		<property name="takimAdi" value="Beşiktaş" />
+		<property name="kurulus" value="1903" />
+		
+	</bean>
+	
+	<bean id="ts" parent="futbolTakim">
+		
+		<property name="takimAdi" value="Trabzonspor" />
+		<property name="kurulus" value="1961" />
+		
+	</bean>
+	
+	
+	
+
+
+
+</beans>
